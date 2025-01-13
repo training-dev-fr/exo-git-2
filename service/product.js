@@ -5,3 +5,5 @@ const getProduct = async (page) => {
     let data = await result.json();
     return data.data;
 }
+
+export {getProduct};
