@@ -7,14 +7,17 @@ const showProduct = async () => {
     let stringDom = "";
     for(let product of listProduct){
         stringDom += `<div class="product">
-            <div class="name">
+            <div class="picture">
                 <img src="https://dummyimage.com/250x100/000000/FFFFFF.png" />
             </div>
-            <div class="name">
-                ${product.name}
+            <div class="content">
+                <div class="name">
+                    ${product.name}
+                </div>
+                <div class="price">
+                    ${product.price}
+                </div>
             </div>
-            <div class="name">
-                ${product.price}
             </div>
         `
     }
