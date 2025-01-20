@@ -1,0 +1,17 @@
+.product-list{
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.product{
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    overflow: hidden;
+    width: calc(20% - 15px);
+}
+
+.product .content{
+    display: flex;
+}

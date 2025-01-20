@@ -1,0 +1,47 @@
+/* Style de base */
+.accordion {
+    max-width: 600px;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  /* Chaque section */
+  .accordion-item {
+    border-bottom: 1px solid #ddd;
+  }
+  
+  /* Titre de section */
+  .accordion-header {
+    display: block;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    background: #f7f7f7;
+    transition: background 0.3s;
+  }
+  
+  .accordion-header:hover {
+    background: #e0e0e0;
+  }
+  
+  /* Contenu caché */
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 15px;
+    background: #fff;
+  }
+  
+  /* Contenu visible si checkbox est coché */
+  .accordion-item input[type="checkbox"] {
+    display: none; /* Cache le checkbox */
+  }
+  
+  .accordion-item input[type="checkbox"]:checked ~ .accordion-content {
+    max-height: 200px; /* Ajuste selon la taille du contenu */
+    padding: 15px;
+  }
