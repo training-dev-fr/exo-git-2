@@ -1,0 +1,30 @@
+/* Conteneur principal */
+.star-rating {
+    display: flex;
+    justify-content: center;
+    flex-flow: row-reverse;
+    gap: 5px; /* Espacement entre les étoiles */
+  }
+  
+  /* Étoiles */
+  .star-rating input {
+    display: none; /* Cache les boutons radio */
+  }
+  
+  .star-rating label {
+    font-size: 2rem;
+    color: #ccc; /* Couleur des étoiles non sélectionnées */
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+  }
+  
+  /* Étoiles sélectionnées ou survolées */
+  .star-rating input:checked ~ label,
+  .star-rating label:hover,
+  .star-rating label:hover ~ label {
+    color: #f5c518;
+  }
+
+  .star-rating label {
+    transition: color 0.5s ease-in-out;
+  }

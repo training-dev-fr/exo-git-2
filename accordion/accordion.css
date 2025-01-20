@@ -1,47 +1,41 @@
-/* Style de base */
-.accordion {
-    max-width: 600px;
-    margin: 20px auto;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    overflow: hidden;
-  }
-  
-  /* Chaque section */
-  .accordion-item {
-    border-bottom: 1px solid #ddd;
-  }
-  
-  /* Titre de section */
-  .accordion-header {
-    display: block;
-    padding: 15px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    background: #f7f7f7;
-    transition: background 0.3s;
-  }
-  
-  .accordion-header:hover {
-    background: #e0e0e0;
-  }
-  
-  /* Contenu caché */
-  .accordion-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-    padding: 0 15px;
-    background: #fff;
-  }
-  
-  /* Contenu visible si checkbox est coché */
-  .accordion-item input[type="checkbox"] {
-    display: none; /* Cache le checkbox */
-  }
-  
-  .accordion-item input[type="checkbox"]:checked ~ .accordion-content {
-    max-height: 200px; /* Ajuste selon la taille du contenu */
-    padding: 15px;
-  }
+*{
+  box-sizing: border-box;
+}
+
+body{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.accordion{
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.accordion input{
+  display: none;
+}
+
+.accordion label{
+  background-color: #404040;
+  color: white;
+  padding: 15px;
+  width: 100%;
+  display: flex;
+}
+
+.accordion .accordion-content{
+  background-color: #E0E0E0;
+  display: flex;
+  height: 0px;
+  transition: height .5s;
+}
+
+.accordion input:checked ~ .accordion-content{
+  height: auto;
+  padding: 15px;
+}
